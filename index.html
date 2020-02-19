@@ -45,6 +45,8 @@
             } else if (playerSelection == "scissors" && computerSelection == "Rock") {
             computerScore ++;
             console.log("You lose. Rock beats Scissors!");
+            } else if (playerSelection !== "rock" || "paper" || "scissors") {
+                console.log(playerSelection + " is an invalid input");
             } else {
             console.log("Draw!");
         }
@@ -63,11 +65,14 @@ play();
 console.log("Your total: " + playerScore + " : Computer's total: " + computerScore);
 if(playerScore > computerScore){
     console.log("Final result: You win!");
+    alert("You've won!");
 } else if(computerScore > playerScore) {
     console.log("Final result: You lose!");
+    alert("You've lost.");
 }
 else {
     console.log("It ends as a draw!");
+    alert("It's a draw.");
 }
 }
 
